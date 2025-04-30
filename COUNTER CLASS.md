@@ -20,7 +20,8 @@ Create the object of the subclasses and invoke the sides() method.
 ### PROGRAM
 
 ```
-
+#Reg.No:212222040120
+#Name:PRASANNA R
 from abc import ABC  
   
 class Polygon(ABC):   
