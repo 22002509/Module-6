@@ -3,54 +3,73 @@
 
 ### AIM  
 
-To write a Python program to create the abstract method  calculate_area  which is  of the abstract class 'Shape'. The implementation of this abstract class can be defined in the sub-classes that inherit the class 'Shape'.  'Rectangle' and 'Circle' are the two sub-classes that inherit the abstract class 'Shape'.
+To Create an abstract base class has a concrete method sleep() that will be the same for all the child classes. So, we do not define it as an abstract method, thus saving us from code repetition. On the other hand, the sounds that animals make are all different. For that purpose, define the sound() method as an abstract method. then implement it in all child classes.
 
 ### ALGORITHM
 
-1. Start the Program.
-2. Import ABC (Abstract Base Class) to define an abstract class.
-3. Define an abstract class Shape with an abstract method calculate_area().
-4. Create subclass Rectangle:
-   Set length = 5 and breadth = 3.
-   Implement calculate_area() to return length × breadth.
-5. Create subclass Circle:
-   Set radius = 4.
-   Implement calculate_area() to return π × radius² (π ≈ 3.14).
-6. Create objects rec and cir for Rectangle and Circle.
-7. Call calculate_area() for each object.
-8. Print the areas of the rectangle and the circle.
-9. End the Program.
+1.Start
+
+Import the required module:
+Import ABC and abstractmethod from the abc module to define an abstract base class.
+
+Define the abstract base class:
+
+Name it Animal.
+
+Create a concrete method sleep() that prints "I am going to sleep in a while".
+
+Define an abstract method sound() using the @abstractmethod decorator. This method will be overridden in subclasses.
+
+Define a subclass (e.g., Cat) that inherits from Animal:
+
+Implement the sound() method in the subclass to print:
+
+"I can meow"
+
+"I can hiss"
+
+Create an object of the subclass (e.g., Cat).
+
+Call the methods:
+
+Call sleep() to display the common sleep message.
+
+Call sound() to display cat-specific sounds.
+
+End
 
 ### PROGRAM
 
 ```
-from abc import ABC
-class Shape(ABC):
-    def calculate_area(self):
+from abc import ABC, abstractmethod
+
+# Abstract Base Class
+class Animal(ABC):
+    def sleep(self):
+        print("I am going to sleep in a while")
+
+    @abstractmethod
+    def sound(self):
         pass
-class Rectangle(Shape):
-    length = 5
-    breadth =3 
-    def calculate_area(self):
-        return self.length * self.breadth
 
-class Circle(Shape):
-  radius = 4
-  def calculate_area(self):
-      return 3.14 * self.radius * self.radius
+# Child Class
+class Cat(Animal):
+    def sound(self):
+        print("I can meow")
+        print("I can hiss")
 
-rec=Rectangle()
-rec.calculate_area()
-cir=Circle()
-cir.calculate_area()
-print("Area of a rectangle:", rec.calculate_area()) 
-print("Area of a circle:", cir.calculate_area()) 
+# Example usage
+c = Cat()
+c.sleep()
+c.sound()
+
 ```
 
 ### OUTPUT
 
-![image](https://github.com/user-attachments/assets/95485111-3a85-4547-84a9-168c30664578)
+![image](https://github.com/user-attachments/assets/ea81dcc9-f5f5-4b2c-8aa6-712ef4c81dd8)
+
 
 ### RESULT
 
-Thus the python program for calculating area using abstract method was successfully created.
+Thus the python program for abstract method was successfully created.
