@@ -1,39 +1,48 @@
 # Exp.No:29  
 ## Encapsulation
 
----
-
 ### AIM  
-To write a Python program to create a class `Student` with the private members `name` and `age`, and add getter and setter methods to initialize and modify the `age` variable.
 
----
+To write a Python program to create a class Employee with public method show to display the details of the employee.
 
 ### ALGORITHM
 
-1. **Start the Program.**
-2. **Define the `Student` class.**
-   - Inside the `Student` class, define the `__init__` method to initialize `name` and the private member `__age`.
-3. **Define a getter method** `get_age` to return the value of the private member `__age`.
-4. **Define a setter method** `set_age` to set a new value to the private member `__age`.
-5. **Create an object `stud`** of the `Student` class with the name 'Jessa' and age 14.
-6. **Print the name and the age** of `stud` using the getter method.
-7. **Use the setter method** `set_age` to change the age of `stud` to 16.
-8. **Print the name and the updated age** of `stud` using the getter method.
-9. **End the program.**
-
----
+1. Start the Program.
+2. Define a class Employee with a constructor __init__:
+3. Initialize public data members name and salary.
+4. Create an object emp of the Employee class with given name and salary.
+5. Access and print the public data members name and salary.
+6. Print again the name and salary.
+7. End the program.
 
 ### PROGRAM
 
 ```
 
+class Employee:
+    # constructor
+    def __init__(self, name, salary):
+        # public data members
+        self.name = name
+        self.salary = salary
 
+    # public instance methods
+    
+# creating object of a class
+emp = Employee('Jessa', 10000)
+
+# accessing public data members
+print("Name: ", emp.name, 'Salary:', emp.salary)
+
+# call public method of the class
+print("Name: ", emp.name, 'Salary:', emp.salary)
 
 ```
 
 ### OUTPUT
 
+![image](https://github.com/user-attachments/assets/ebc32dbc-a057-4d54-8d82-a656ef2c0e08)
 
 ### RESULT
 
-
+Thus the Python program to create a class Employee with public method show to display the details of the employee was successfully created.
