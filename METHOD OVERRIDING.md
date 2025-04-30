@@ -21,6 +21,8 @@ To write a Python program to demonstrate method overriding by creating a parent 
 ### PROGRAM
 
 ```
+#Reg.No:212222040120
+#Name:PRASANNA R
 class Fish:
     def type(self):
         print("fish")
